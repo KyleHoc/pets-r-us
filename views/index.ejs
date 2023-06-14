@@ -1,0 +1,88 @@
+<!--Display header.ejs as a partial-->
+<%- include("header.ejs")  %>
+
+<!--Display a main container-->
+<div class="main-container">
+    <!--Display an upper grid container-->
+    <div class="upper">
+        <!--Display a header and information about Pets-R-Us-->
+        <h1>Our Mission:</h1>
+        <p class="summary">Here at Pets-R-Us, our goal is to be the one-stop-shop for pet owners in the Tri-Cities area. 
+           We pride ourselves in meeting the needs of our customers and their pets, which is why we offer
+           high quality products from only the hottest brands that will keep your four-legged friend happy 
+           and healthy at prices that owners will love. Our new dog grooming and boarding services are run
+           by professionals that care deeply about the needs of each dog, we promise that owners will be 
+           satisfied with the level of care that we have to offer, or your money back. Whether you've got a dog, cat,
+            lizard or a parakeet, Pets-R-Us has something to offer, so book an appointment today or stop by at one of our two
+            in-store locations listed below.</p>
+        <hr>
+    </div>
+    <!--Display a lowe grid container-->
+    <div class="lower">
+        <!--Display addresses for both (fictitious) Pets-R-Us locations-->
+        <div class="location">
+            <h1>Locations:</h1>
+            <h2>Binghamton, NY</h2>
+            <p>1234 North Street</p>
+            <h2>Vestal, NY</h2>
+            <p>5678 Vestal Parkway East</p>
+        </div>
+        <!--Display the business hours for the stores-->
+        <div class="hours">
+            <h2>Hours:</h2>
+            <p>Mon: 8:00 AM - 7:00 PM</p>
+            <p>Tue: 8:00 AM - 7:00 PM</p>
+            <p>Wed: 8:00 AM - 7:00 PM</p>
+            <p>Thu: 8:00 AM - 7:00 PM</p>
+            <p>Fri: 8:00 AM - 9:00 PM</p>
+            <p>Sat: 8:00 AM - 9:00 PM</p>
+            <p>Sun: 8:00 AM - 5:00 PM</p>
+        </div>
+    </div>
+</div>
+
+<!--Display a container to hold dog of the week and testimonials-->
+<div class="mid-container">
+    <!--Display a card holding info on the dog of the week-->
+    <div class="card">
+        <h2>Dog of the Week</h2>
+        <img src="../public/images/dog.jpg" alt="Photo of a Labrador Retriever" height="300" width="225">
+        <p>Name: Daisy</p>
+        <p>Likes: Cheese, tennis balls</p>
+        <p>Dislikes: Vacuum Cleaners</p>
+        <p>Good Girl Rating: 11/10</p>
+        
+    </div>
+    <!--Display a card holding "testimonials" from customers-->
+    <div class="card">
+        <h2>Testimonials</h2>
+        <div class="testimonials">
+            <p>"I've never seen my Max's coat shine like it did after his grooming appointment at Pets-R-Us. 
+                Their staff is so friendly, and great at what they do"</p>
+            <p>Mary P.</p>
+            <br>
+            <p>"I was nervous about leaving my dog behind while on a business trip, but the people at Pets-R-Us
+                 took wonderful care of him. I loved the daily photo updates, Ace had so much fun playing with 
+                 the other dogs"</p>
+            <p>Craig S.</p>
+            <br>
+            <p>"Great prices, awesome selection. I save so much money buying all my kitty litter and cat food at Pets-R-Us"</p>
+            <p>Shelly M.</p>
+            <br>
+            <p>"This is the only place I can get specialty brand treats for my iguana, he loves them!"</p>
+            <p>Phil T.</p>
+        </div>
+    </div>
+</div>
+
+<!--Display a container with a form for providing the user's email-->
+<div class="bottom-container">
+    <h2>Contact Us:</h2>
+    <form>
+        <input type="email" placeholder="Email">
+        <button>Submit</button>
+    </form>
+</div>
+
+<!--Display footer.ejs as a partial-->
+<%- include("footer.ejs")  %>

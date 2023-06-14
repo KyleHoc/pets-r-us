@@ -1,0 +1,59 @@
+<!--Title: grooming.ejs
+Author: Kyle Hochdoerfer
+Date: 6/13/23
+Description: Dog grooming information page for Pets-R-Us site
+-->
+
+<!--Display header.ejs as a partial-->
+<%- include("header.ejs")  %>
+
+<!--Display a container with a header and dog grooming information-->
+<div class="main-container">
+    <h1>Dog Grooming Services:</h1>
+    <div class="grooming">
+        <p class="summary">At Pets-R-Us, we offer professional dog grooming services that will ensure that 
+            both you and your dog will walk away feeling content. Our certified staff care 
+            just as much about the health and well-being of each and every dog they groom as their 
+            owners do, that’s why we offer consultation services before grooming a new client, that way 
+            we can meet with the owner and their dog in advance and explain exactly their dog’s grooming 
+            session will entail and prepare the proper tools for the job.
+           <br>
+           <br>
+           As a matter of principle, our staff do their best to preserve as much of every dog’s coat as possible, 
+           de-matting every inch of fur that they can before cutting any off. Grooming can be a stressful time 
+           for some dogs, and our professionals know this better than anyone; they’re well-equipped to ensure that 
+           your dog will have their session in a loving environment that can adjust to their needs and personality.
+           </p>
+    </div>
+</div>
+
+<!--Display a container with a list of dog grooming services and their pricing-->
+<div class="list-container">
+    <h1>Services:</h1>
+    <div class="services-container">
+        <div class="service">
+            <p><span class="service-name">Grooming Consultation: </span>We'll meet with you and your dog, provide an overview 
+                of what kind of care your dog will receive and what their needs are, to help ensure their grooming sessions with us 
+                will provide the best possible experience - <span class="service-name">$10</span></p>
+        </div>
+
+        <div class="service">
+            <p><span class="service-name">Regular Course: </span>Includes a standard bath and trim, along with teeth cleaning 
+                and nail cutting - <span class="service-name">$45</span></p>
+        </div>
+
+        <div class="service">
+            <p><span class="service-name">Advanced Course: </span>Everything from the regular course, along with flea and tick 
+                prevention care, and in-depth ear and eye cleaning - <span class="service-name">$65</span></p>
+        </div>
+
+        <div class="service">
+            <p><span class="service-name">Deluxe Course: </span>Everything from the Advanced Course, along with options for a 
+                custom trim and the use of top-of-the-line deluxe doggy shampoo that maximizes softness and coat health 
+                - <span class="service-name">$85</span></p>
+        </div>
+    </div>
+</div>
+
+<!--Display a footer from footer.ejs as a partial-->
+<%- include("footer.ejs")  %>

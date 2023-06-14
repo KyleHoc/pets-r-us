@@ -1,0 +1,27 @@
+{
+  "name": "pets-r-us",
+  "version": "1.0.0",
+  "description": "WEB 340 course project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KyleHoc/pets-r-us.git"
+  },
+  "author": "Kyle Hochdoerfer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KyleHoc/pets-r-us/issues"
+  },
+  "homepage": "https://github.com/KyleHoc/pets-r-us#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
