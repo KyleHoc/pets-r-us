@@ -212,3 +212,14 @@ input{
 .center-image{
     padding-left: 20px;
 }
+
+/*Link color styling*/
+.training a{
+    color: #0000EE;
+}
+
+/*Boarding page styling*/
+.boarding{
+    width: 50%;
+    margin: auto auto 5% auto;
+}

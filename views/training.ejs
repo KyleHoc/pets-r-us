@@ -1,0 +1,74 @@
+<!--Title: training.ejs
+Author: Kyle Hochdoerfer
+Date: 6/15/23
+Description: Dog training information page for Pets-R-Us site
+-->
+
+<!--Display _header.ejs partial-->
+<%- include("_header.ejs")  %>
+
+<!--Display a container with a _header and dog training information-->
+<div class="main-container">
+    <h1>Meet Our Trainer:</h1>
+    <div class="service-summary">
+        <p class="summary training">Our certified team of dog training staff offer a host of obedience and behavioral training
+            classes that are assured to provide a healthier, better-behaved lifestyle for your dog. We offer separate 
+            courses for puppies, adolescent, and adult dogs, so no matter your pup's age or disposition, our training
+            services can make their lives - and yours - a whole lot easier.
+           <br>
+           <br>
+           Our head trainer, Mark Smith, has ten years of experience working with dogs and their owners. Having grown up
+           with a love animals, Mark received official certification from the <a href="https://www.ccpdt.org/">Certification Council
+           for Professional Dog Trainers</a> and has since taken pride in his work bettering the relationship between dogs and their owners ever since.
+           Mark has experience working with dogs of all breeds and sizes, and a passion to help them all live their best lives.
+        </p>
+        <!--Display and center a photo of our hypothetical dog trainer-->
+        <div class="center-image">
+            <img src="../public/images/trainer.jpg" alt="Photo of a man with a dog" height="350" width="450">
+        </div>
+    </div>
+</div>
+
+<!--Display a container with a list of dog training services and their pricing-->
+<div class="list-container">
+    <h1>Services:</h1>
+    <div class="services-container">
+        <h2>Puppy Training:</h2>
+        <div class="service">
+            <p><span class="service-name">Puppy Training I: </span>A six week training class for teaching fundamental skills 
+                to puppies (ten weeks - five months old). Covers behaviors such as potty training, biting, chewing and barking
+                 - <span class="service-name">$149</span></p>
+
+            <p><span class="service-name">Puppy Training II: </span>A six week training class for puppies that already have the fundamentals covered. 
+                Topics include bath time, dealing with unfamiliar objects at home, and vet visits
+                - <span class="service-name">$149</span></p>
+        </div>
+        <br>
+        <h2>Adolescent Dog Training:</h2>
+        <div class="service">
+            <p><span class="service-name">Adolescent Training I: </span>A five week training class for dogs that are mostly grown and know some basic cues.
+                Topics include anti-counter sniffing, returning when called, leash training, and responding to their name
+                 - <span class="service-name">$129</span></p>
+
+            <p><span class="service-name">Adolescent Training II: </span>A five week training class that includes further development on
+                skills from the preceding course. Topics include sit, lie down and stay, kennel comfort, and socialization with other dogs
+                - <span class="service-name">$129</span></p>
+        </div>
+        <br>
+        <div class="service">
+            <h2>Adult Dog Training:</h2>
+            <div class="service">
+                <p><span class="service-name">Advanced Training: </span>A four week training class for adult dogs.
+                    Further refines obedience skills, and behavior in real-life situations, requires
+                     participation in prior training class - <span class="service-name">$110</span></p>
+    
+                <p><span class="service-name">Advanced Training II: </span>A four week training class that focuses on ensuring
+                    that your dog will listen to commands and behave themselves in crowded areas in public, requires
+                    participation in prior training class - <span class="service-name">$110</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Display _footer.ejs partial-->
+<%- include("_footer.ejs")  %>

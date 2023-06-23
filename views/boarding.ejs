@@ -1,0 +1,71 @@
+<!--Title: boarding.ejs
+Author: Kyle Hochdoerfer
+Date: 6/13/23
+Description: Dog boarding information page for Pets-R-Us site
+-->
+
+<!--Display _header.ejs partial-->
+<%- include("_header.ejs")  %>
+
+<!--Display a container with a _header and dog grooming information-->
+<div class="main-container">
+    <h1>Dog Boarding Services:</h1>
+    <div class="service-summary">
+        <p class="summary">Our boarding services provide a safe and loving environment for your dog throughout their stay.
+            We offer both doggy daycare and short or long-term boarding, during which, dogs are given monitored socialization
+            time where they get to play with their fellow boarders. Our facility features a 24/7 video monitoring system that owners will
+            be given access to upon dropping their dog(s) off, all to ensure that every dog is cared for to the best of our abilities. 
+           <br>
+           <br>
+           Dogs boarded with us are fed the same high-quality foods that are sold at Pets-R-Us, and our socialization area is filled with
+           a wide variety of toys to help keep our boarders happy and content during their stay. 
+           We also offer daily photo update texts for each dog boarded with us along with written status reports available upon request, 
+           so owners can rest at ease knowing that their dog is receiving only the best care while they're away, because at Pets-R-Us, 
+           your dog's well-being is our highest concern.
+           <br>
+           <br>
+           Our pricing tiers cover boarding for one, two, or three dogs. For questions about other arrangements, please call us at 111-222-333.
+        </p>
+        <!--Display and center a photo of our hypothetical dog trainer-->
+        <div class="center-image">
+            <img src="../public/images/boarding.jpg" alt="Photo of dog in a dog crate" height="350" width="450">
+        </div>
+    </div>
+</div>
+
+<!--Display a container with a list of dog training services and their pricing-->
+<div class="list-container boarding">
+    <h1>Pricing:</h1>
+    <div class="services-container">
+        <h2>Single Dog:</h2>
+        <div class="service">
+            <p><span class="service-name">1 - 5 Nights:</span> $30 per night</p>
+
+            <p><span class="service-name">Over 5 Nights: </span> Additional $10 fee per night</p>
+        </div>
+        <br>
+        <h2>Two Dogs:</h2>
+        <div class="service">
+            <p><span class="service-name">1 - 5 Nights:</span> $40 per night</p>
+
+            <p><span class="service-name">Over 5 Nights: </span> Additional $15 fee per night</p>
+        </div>
+        <br>
+        <div class="service">
+            <h2>Three Dogs:</h2>
+            <div class="service">
+                <p><span class="service-name">1 - 5 Nights: </span>$50 per night</p>
+    
+                <p><span class="service-name">Over 5 nights: </span>Additional $20 fee per night</p>
+            </div>
+            <br>
+            <h2>Doggy Daycare:</h2>
+            <div class="service">
+              <p>$15 per day per dog</p>
+        </div>
+        </div>
+    </div>
+</div>
+
+<!--Display _footer.ejs partial-->
+<%- include("_footer.ejs")  %>

@@ -30,6 +30,15 @@ app.get('/grooming', function(req, res) {
     res.render('grooming', { });
  });
 
+ app.get('/boarding', function(req, res) {
+    res.render('boarding', { });
+ });
+
+ app.get('/training', function(req, res) {
+    res.render('training', { });
+ });
+
+
 //Set the app to listen on port 3000
 app.listen(PORT, () => {
     console.log('Application started and listening on PORT ' + PORT);

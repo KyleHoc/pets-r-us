@@ -1,0 +1,42 @@
+<!--Title: _header.ejs
+Author: Kyle Hochdoerfer
+Date: 6/13/23
+Description: _header for Pets-R-Us site
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Provide a title, metadata, link a stylesheet, and Google Fonts-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets-R-Us</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Source+Serif+4&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <!--Display a nav bar with a logo that links to the index-->
+    <nav>
+      <a class="main-logo" href="/">Pets-R-Us</a>
+      <div class="nav-container">
+        <!--Display nav links to other pages on the site-->
+        <ul>
+          <li>
+            <!--Display a drop down menu with links to the Grooming, Boarding, and Training pages-->
+            <a href="#">Services ▾</a>
+            <ul class="dropdown">
+                <li><a class="nav-link" href="/grooming">Grooming</a></li>
+                <li><a class="nav-link" href="/boarding">Boarding</a></li>
+                <li><a class="nav-link" href="/training">Training</a></li>
+            </ul>
+        </li>
+            <!--Display the remaining nav links-->
+            <li><a class="nav-link" href="/registration">Booking</a></li>
+            <li><a class="nav-link">Customers</a></li>
+            <li><a class="nav-link">My Appointments</a></li>
+            
+        </ul>
+    </div>
+</nav>
