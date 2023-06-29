@@ -1,0 +1,38 @@
+<!--Title: registration.ejs
+Author: Kyle Hochdoerfer
+Date: 6/25/23
+Description: Registration page for Pets-R-Us site
+-->
+
+<!--Display _header.ejs partial-->
+<%- include("./partials/_header.ejs")  %>
+
+<!--Display a main container with a header-->
+<div class="main-container">
+    <h1>Register</h1>
+
+    <!--Display a form to register customers-->
+    <form action="/customers" method="post">
+
+        <!--Display a text form field for customer ID-->
+        <div class="form-field">
+            <label for="customerId">Customer ID:&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" name="customerId" id="customerId">
+        </div>
+        <br>
+
+        <!--Display an email form field for customer email-->
+        <div class="form-field">
+            <label for="email">Email Address:</label>
+            <input type="email" name="email" id="email">
+        </div>
+
+        <!--Display a submit button-->
+        <div class="btn-field">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+
+<!--Display _footer.ejs partial-->
+<%- include("./partials/_footer.ejs")  %>

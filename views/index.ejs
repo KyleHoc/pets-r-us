@@ -1,5 +1,11 @@
+<!--Title: index.ejs
+Author: Kyle Hochdoerfer
+Date: 6/13/23
+Description: Landing page for Pets-R-Us site
+-->
+
 <!--Display _header.ejs partial-->
-<%- include("_header.ejs")  %>
+<%- include("./partials/_header.ejs")  %>
 
 <!--Display a main container-->
 <div class="main-container">
@@ -15,6 +21,8 @@
            satisfied with the level of care that we have to offer, or your money back. Whether you've got a dog, cat,
             lizard or a parakeet, Pets-R-Us has something to offer, so book an appointment today or stop by at one of our two
             in-store locations listed below.</p>
+
+            <a href="/registration" class="btn-primary btn">Register for a Free Account</a>
         <hr>
     </div>
     <!--Display a lowe grid container-->
@@ -85,4 +93,4 @@
 </div>
 
 <!--Display footer.ejs partial-->
-<%- include("_footer.ejs")  %>
+<%- include("./partials/_footer.ejs")  %>

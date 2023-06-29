@@ -223,3 +223,48 @@ input{
     width: 50%;
     margin: auto auto 5% auto;
 }
+
+/*Form styling*/
+form{
+    text-align: center;
+}
+
+.form-field{
+    padding-left: auto;
+    padding-right: auto;
+}
+
+.form-field label{
+    margin-right: 1%;
+}
+
+/*Provide button styling*/
+.btn{
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 15px 32px;
+    color: black;
+}
+
+/*Provide primary button styling*/
+.btn-primary{
+    background-color: #265699;
+    color: #FFF;
+}
+
+.btn-field{
+    margin: 10px 0 10px 0;
+}
+
+.btn a {
+    text-decoration: none;
+}
+
+.btn a:hover{
+    text-decoration: underline;
+}
