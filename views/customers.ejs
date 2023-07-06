@@ -1,0 +1,36 @@
+<!--Display _header.ejs partial-->
+<%- include("./partials/_header.ejs")  %>
+
+<!--Display a main container-->
+<div class="main-container">
+    <h1>Registered Customers</h1>
+    <!--If there are registered customers-->
+    <% if(customers.length > 0) { %>
+        <!--Display a table with customer ID and email-->
+        <table class="table">
+            <tr>
+                <th>Customer ID:</th>
+                <th>Email:</th>
+            </tr>
+            <tbody>
+            <% customers.forEach(function(customer) { %>
+            <tr>
+                <td>
+                    <%= customer.customerId %>
+                </td>
+                <td>
+                    <%= customer.email %>
+                </td>
+            </tr>
+            <% }) %>
+            </tbody>
+        </table>
+        <% } else { %>
+        <!--Otherwise, state that no customers have been added to the database-->
+        <h3>Customers have not been added to the database.</h3>
+        <% } %>
+
+</div>
+
+<!--Display _footer.ejs partial-->
+<%- include("./partials/_footer.ejs")  %>

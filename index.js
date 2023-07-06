@@ -67,6 +67,17 @@ app.get('/grooming', function(req, res) {
      });
  });
 
+ //Display customers page and get all customers from the database
+ app.get('/customers', async (req, res) => {
+    const allCustomers = await Customer.find()
+            res.render('customers', {
+                title: 'Pets-R-Us Customers: List',
+                customers: allCustomers
+         })
+})
+
+
+
 
  //Post request for registration
  app.post('/customers', (req, res, next) => {

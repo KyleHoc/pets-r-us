@@ -108,6 +108,31 @@ ul li ul.dropdown li {
     margin: 50px 100px 70px 100px;
 }
 
+.form-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #FFF;
+    margin: 50px auto 70px auto;
+    width: 50%;
+}
+
+.center-col{
+    grid-column: 2/3;
+}
+
+form{
+    text-align: left;
+}
+
+.form-field{
+    margin-left: 10%;
+}
+
+.center-col  h1{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .summary{
     text-align: left;
 }
@@ -162,20 +187,15 @@ hr{
 }
 
 /*Setting the border radius for all container types*/
-.card, .main-container, .bottom-container, .list-container{
+.card, .main-container, .bottom-container, .list-container, .form-container{
     border-radius: 20px;
     border: solid 10px #265699;
 }
 
-/*Set form display to flex*/
-.form{
-    display: flex;
-}
-
 /*Text input styling*/
 input{
-    font-size: 16px;
-    width: 300px;
+    font-size: 18px;
+    width: 250px;
 }
 
 /*Styling for the grooming page's container*/
@@ -224,20 +244,6 @@ input{
     margin: auto auto 5% auto;
 }
 
-/*Form styling*/
-form{
-    text-align: center;
-}
-
-.form-field{
-    padding-left: auto;
-    padding-right: auto;
-}
-
-.form-field label{
-    margin-right: 1%;
-}
-
 /*Provide button styling*/
 .btn{
     border: none;
@@ -259,6 +265,7 @@ form{
 
 .btn-field{
     margin: 10px 0 10px 0;
+    text-align: center;
 }
 
 .btn a {
@@ -267,4 +274,28 @@ form{
 
 .btn a:hover{
     text-decoration: underline;
+}
+
+/*Table styling*/
+table{
+    border-collapse: collapse;
+    width: 50%;
+    margin-bottom: 30px;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Styling for table headers*/
+table th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #265699;
+    color: #FFF;
+}
+
+/*Styling for table headers and data*/
+table td, table th{
+    border: 1px solid #265699;
+    padding: 8px;
 }
