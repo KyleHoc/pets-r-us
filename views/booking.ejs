@@ -1,0 +1,60 @@
+<!--Display _header.ejs partial-->
+<%- include("./partials/_header.ejs")  %>
+
+<!--Display a main container with a header-->
+<div class="form-container">
+    <div class="center-col">
+        <h1>Book Appointment</h1>
+
+        <!--Display a form to register customers-->
+        <form action="/appointments" method="post">
+
+            <!--Display a text form field for username-->
+            <div class="form-field">
+                <label for="userName">User Name:</label><br>
+                <input type="text" name="userName" id="userName">
+            </div>
+            <br>
+
+            <!--Display an email form field for customer email-->
+            <div class="form-field">
+                <label for="firstName">First Name:</label><br>
+                <input type="text" name="firstName" id="firstName">
+            </div>
+            <br>
+
+            <!--Display an email form field for customer email-->
+            <div class="form-field">
+                <label for="lastName">Last Name:</label><br>
+                <input type="text" name="lastName" id="lastName">
+            </div>
+            <br>
+
+            <!--Display an email form field for customer email-->
+            <div class="form-field">
+                <label for="email">Email:</label><br>
+                <input type="email" name="email" id="email">
+            </div>
+            <br>
+
+            <!--Display an email form field for customer email-->
+            <div class="form-field">
+                <label for="service">Service:</label><br>
+                <select name="service" id="service">
+                    <% services.forEach((service) => { %>
+                        <option value="'<%= service.value %>'"><%= service.text %></option>
+                        <% }) %>
+                </select>
+            </div>
+            <br>
+
+            <!--Display a submit button-->
+            <div class="btn-field">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--Display _footer.ejs partial-->
+<%- include("./partials/_footer.ejs")  %>

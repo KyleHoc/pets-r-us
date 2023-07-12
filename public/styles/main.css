@@ -75,7 +75,7 @@ a:hover{
 /*Styling to enable a drop-down menu on hover for the Services nav option*/
 ul li ul.dropdown {
     width: 20%;
-    margin-left: 60%;
+    margin-left: 50%;
     background: #132B4D;
     display: none;
     position: absolute;
@@ -92,7 +92,7 @@ ul li ul.dropdown li {
 
 /*Nav container styling*/
 .nav-container{
-    width: 40%;
+    width: 55%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -186,6 +186,10 @@ hr{
     margin: 50px 100px 70px 100px;
 }
 
+.bottom-container form{
+    text-align: center;
+}
+
 /*Setting the border radius for all container types*/
 .card, .main-container, .bottom-container, .list-container, .form-container{
     border-radius: 20px;
@@ -194,7 +198,7 @@ hr{
 
 /*Text input styling*/
 input{
-    font-size: 18px;
+    font-size: 15px;
     width: 250px;
 }
 

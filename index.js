@@ -1,13 +1,17 @@
 //Enable strict mode
 "use strict";
 
-//Require express, path, and mongoose
+//Require express, path, mongoose, and fs
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
+const fs = require('fs');
 
 //Import customer model
 const Customer = require('./models/customer');
+
+//Import appointment model
+const Appointment = require('./models/appointment')
 
 //Declare a variable for express use
 const app = express();
@@ -67,6 +71,15 @@ app.get('/grooming', function(req, res) {
      });
  });
 
+ app.get('/booking', function(req, res) {
+    let jsonFile = fs.readFileSync('./public/data/services.json');
+    let services = JSON.parse(jsonFile);
+    res.render('booking', {
+      title: 'Pets-R-Us: Booking',
+      services: services
+     });
+ });
+
  //Display customers page and get all customers from the database
  app.get('/customers', async (req, res) => {
     const allCustomers = await Customer.find()
@@ -95,7 +108,7 @@ app.get('/grooming', function(req, res) {
    .then((result) => {
       //If successful, redirect to landing page
       res.render('index', {
-         title: 'Pets-R-Us: Registration'
+         title: 'Pets-R-Us: Home'
      })
    })
    .catch((err) => {
@@ -103,6 +116,34 @@ app.get('/grooming', function(req, res) {
       console.log(err);
    })
 })
+
+//Post request for appointment booking
+app.post('/appointments', (req, res, next) => {
+    //Declare a new appointment object
+    const newAppointment = new Appointment({
+        userName: req.body.userName,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        service: req.body.service
+    });
+ 
+    //Output the new Appointment to the console
+    console.log(newAppointment);
+ 
+    //Register appointment to database
+    Appointment.create(newAppointment)
+    .then((result) => {
+       //If successful, redirect to landing page
+       res.render('index', {
+          title: 'Pets-R-Us: Home'
+      })
+    })
+    .catch((err) => {
+       //If unsuccessful, output error message to console
+       console.log(err);
+    })
+ })
 
 //Set the app to listen on port 3000
 app.listen(PORT, () => {
