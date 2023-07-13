@@ -1,7 +1,7 @@
 //Require mongoose
 const mongoose = require('mongoose');
 
-//Declare a customer schema with customerId and email fields
+//Declare an appointment schema with userName, firstName, lastName, email, and service fields
 let appointmentSchema = new mongoose.Schema({
     userName: { type: String, required: true, unique: true },
     firstName: { type: String, required: true, unique: true },
@@ -10,5 +10,5 @@ let appointmentSchema = new mongoose.Schema({
     service: { type: String, required: true, unique: true }
 });
 
-//Export customer module
+//Export appointment module
 module.exports = mongoose.model('Appointment', appointmentSchema);
