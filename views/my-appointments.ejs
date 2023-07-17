@@ -1,0 +1,51 @@
+<!--Display _header.ejs partial-->
+<%- include("./partials/_header.ejs")  %>
+
+<!--Display a main container with a header-->
+
+<div class="form-container">
+    <div class="center-col">
+        <h2>Appointment Look-Up</h2>
+
+        <!--Display a form to register customers-->
+        <form>
+            <!--Display a text form field for username-->
+            <div class="form-field">
+                <label for="email">Email:</label><br>
+                <input type="email" name="email" id="email">
+            </div>
+            <br>
+
+            <!--Display a submit button-->
+            <div class="btn-field">
+                <button type="submit" class="btn btn-primary" id="look-up">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="appointments"></div>
+
+<script>
+    document.getElementById('look-up').onclick = function() {
+      const email = document.getElementById('email').value;
+      fetch('/appointments/' + email)
+              .then(res => res.json())
+              .then(data => {
+                let tableString = `<br /><h4 style="font-size: 32px; text-align: center; padding-bottom: 10px; 
+                font-weight: lighter">My Appointments</h4><table id="appointments" style="width: 100%;" 
+                class="table full-width"><tr><th>First name</th><th>Last name</th><th>Username</th><th>Service</th></tr>`;
+  
+                for (let appointment of data) {
+                  tableString += `<tr><td>${appointment.firstName}</td><td>${appointment.lastName}</td><td>${appointment.userName}</td><td>${appointment.service}</td></tr>`;
+                }
+  
+                tableString += `</table>`;
+  
+                document.getElementById('appointments').innerHTML = tableString;
+              });
+        }   
+  
+  </script>
+
+<!--Display _footer.ejs partial-->
+<%- include("./partials/_footer.ejs")  %>

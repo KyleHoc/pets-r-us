@@ -89,9 +89,6 @@ app.get('/grooming', function(req, res) {
          })
 })
 
-
-
-
  //Post request for registration
  app.post('/customers', (req, res, next) => {
    //Declare a new customer with a customerId and email
@@ -144,6 +141,24 @@ app.post('/appointments', (req, res, next) => {
        console.log(err);
     })
  })
+
+ app.get('/my-appointments', function(req, res) {
+    res.render('my-appointments', {
+      title: 'Pets-R-Us: My Appointments'
+     });
+ });
+ 
+ //Get request for looking up appointments
+ app.get('/appointments/:email', async(req, res, next) => {
+    Appointment.find({email: "example@gmail.com"}, function(err, appointments) {
+       if (err) {
+            console.log(err);
+            next(err);
+        } else {
+            res.json(appointments);
+        }
+    })
+})
 
 //Set the app to listen on port 3000
 app.listen(PORT, () => {
