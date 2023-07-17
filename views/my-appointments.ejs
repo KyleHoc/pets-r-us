@@ -28,7 +28,7 @@
 <script>
     document.getElementById('look-up').onclick = function() {
       const email = document.getElementById('email').value;
-      fetch('/appointments/' + email)
+      fetch('/api/appointments/' + email)
               .then(res => res.json())
               .then(data => {
                 let tableString = `<br /><h4 style="font-size: 32px; text-align: center; padding-bottom: 10px; 
