@@ -148,9 +148,10 @@ app.post('/appointments', (req, res, next) => {
      });
  });
  
+ 
  //Get request for looking up appointments
  app.get('/api/appointments/:email', async(req, res, next) => {
-    Appointment.find({email: "example@gmail.com"}, function(err, appointments) {
+    Appointment.find({'email': req.params.email}, function(err, appointments) {
        if (err) {
             console.log(err);
             next(err);

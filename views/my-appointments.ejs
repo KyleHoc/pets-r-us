@@ -18,7 +18,7 @@
 
             <!--Display a submit button-->
             <div class="btn-field">
-                <button type="submit" class="btn btn-primary" id="look-up">Submit</button>
+                <input type="submit" value="Search" class="btn btn-primary" id="search"></input>
             </div>
         </form>
     </div>
@@ -26,7 +26,7 @@
 <div id="appointments"></div>
 
 <script>
-    document.getElementById('look-up').onclick = function() {
+    document.getElementById('search').onclick = function() {
       const email = document.getElementById('email').value;
       fetch('/api/appointments/' + email)
               .then(res => res.json())
@@ -44,8 +44,7 @@
                 document.getElementById('appointments').innerHTML = tableString;
               });
         }   
-  
-  </script>
+</script>
 
 <!--Display _footer.ejs partial-->
 <%- include("./partials/_footer.ejs")  %>
