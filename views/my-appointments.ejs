@@ -12,7 +12,7 @@
             <!--Display a text form field for username-->
             <div class="form-field">
                 <label for="email">Email:</label><br>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" required>
             </div>
             <br>
 
@@ -23,27 +23,47 @@
         </form>
     </div>
 </div>
+<!--Empty div for displaying the form results-->
 <div id="appointments"></div>
 
 <script>
-    document.getElementById('search').onclick = function() {
+    //Create an event listener to submit the form
+    document.querySelector('form').addEventListener('submit', function(e) {
+      //Prevent the form from being submit by default
+      e.preventDefault();
+
+      //Declare a variable to hold the email string from the form
       const email = document.getElementById('email').value;
-      fetch('/api/appointments/' + email)
+
+      //Fetch the appointments that have the email address that matches the user input
+      fetch(`/api/appointments/${email}`)
               .then(res => res.json())
               .then(data => {
+                //Declare a string to display an HTML table
                 let tableString = `<br /><h4 style="font-size: 32px; text-align: center; padding-bottom: 10px; 
-                font-weight: lighter">My Appointments</h4><table id="appointments" style="width: 100%;" 
+                font-weight: lighter">My Appointments</h4><table id="appointments" style="width: 70%;" 
                 class="table full-width"><tr><th>First name</th><th>Last name</th><th>Username</th><th>Service</th></tr>`;
   
+                //Declare a empty string for output formatting
+                let output = "";
+
+                //For every appointment fetched:
                 for (let appointment of data) {
-                  tableString += `<tr><td>${appointment.firstName}</td><td>${appointment.lastName}</td><td>${appointment.userName}</td><td>${appointment.service}</td></tr>`;
+                  //Format the service string
+                  output = appointment.service.slice(1, -1);
+                  output = output.charAt(0).toUpperCase() + output.slice(1);
+
+                  //Concatenate an HTML table row to the table string
+                  tableString += `<tr><td>${appointment.firstName}</td><td>${appointment.lastName}</td><td>${appointment.userName}</td><td>${output}</td></tr>`;
                 }
   
+                //Close the HTML table tags
                 tableString += `</table>`;
   
+                //Display the table to the appointments div
                 document.getElementById('appointments').innerHTML = tableString;
               });
-        }   
+        })   
 </script>
 
 <!--Display _footer.ejs partial-->

@@ -3,11 +3,11 @@ const mongoose = require('mongoose');
 
 //Declare an appointment schema with userName, firstName, lastName, email, and service fields
 let appointmentSchema = new mongoose.Schema({
-    userName: { type: String, required: true, unique: true },
-    firstName: { type: String, required: true, unique: true },
-    lastName: { type: String, required: true, unique: true },
-    email: { type: String, required: true, unique: true },
-    service: { type: String, required: true, unique: true }
+    userName: { type: String, required: true },
+    firstName: { type: String, required: true },
+    lastName: { type: String, required: true },
+    email: { type: String, required: true },
+    service: { type: String, required: true }
 });
 
 //Export appointment module
